@@ -32,25 +32,29 @@ public class Program {
 
             list.add(emp);
         }
-        System.out.print("Enter the employee id that will ahve salary increase");
+        System.out.print("Enter the employee id that will ha ve salary increase");
         int idsalary = sc.nextInt();
-        if ( )
-
-
-
-
-
-
-
-
-
-
-
-
+        //Employees emp  = list.stream().filter (x -> x.getId() == id).findFirst().orElse(null);
+        int position = position(list, idsalary);
+        if (position == -1){
+            System.out.println("This id does not exist!");
+        } else {
+            System.out.println("Enter the percentage");
+            double percent = sc.nextDouble();
+            list.get(position).increaseSalary(percent);
+        }
 
 
 
 
         sc.close();
+    }
+    public static int position(List<Employees> list, int id) {
+        for(int i= 0; i<list.size(); i++) {
+            if(list.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
