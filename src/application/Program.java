@@ -44,6 +44,12 @@ public class Program {
             list.get(position).increaseSalary(percent);
         }
 
+        System.out.println();
+        System.out.println("List of employees:");
+        for (Employees emp : list){
+            System.out.println(emp);
+        }
+
 
 
 
