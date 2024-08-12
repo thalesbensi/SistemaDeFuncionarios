@@ -50,11 +50,9 @@ public class Program {
             System.out.println(emp);
         }
 
-
-
-
         sc.close();
     }
+
     public static int position(List<Employees> list, int id) {
         for(int i= 0; i<list.size(); i++) {
             if(list.get(i).getId() == id) {
@@ -63,4 +61,5 @@ public class Program {
         }
         return -1;
     }
+    
 }
